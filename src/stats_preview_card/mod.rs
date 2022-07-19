@@ -36,7 +36,7 @@ impl Component for StatsPreviewCard {
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
         html! {
-            <div class="stats_preview_card">
+            <main class="stats_preview_card">
                 <div class="container">
                     <div class="text">
                         <h1>{"Get "} <span class="addColor"> {"insights"}</span> {" that help your business grow."}</h1>
@@ -51,7 +51,7 @@ impl Component for StatsPreviewCard {
                     </div>
                     <div class="image" />
                 </div>
-            </div>
+            </main>
         }
     }
 }

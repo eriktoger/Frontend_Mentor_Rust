@@ -46,14 +46,14 @@ impl Component for Menu {
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
         html! {
-            <div class="menu">
+            <main class="menu">
                 <div class="container">
                 <Card title={"Stats Preview Card"}
                       difficulty="Newbie"
                       image_url="images/previews/stats_preview_card.jpg"
                       route={Route::StatsPreviewCard} />
                 </div>
-            </div>
+            </main>
         }
     }
 }
