@@ -1,0 +1,44 @@
+.menu {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("images/river.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+.menu .container {
+  background-color: hsla(200, 100%, 91%, 60%);
+  border-radius: 15px;
+  width: max(50%, 300px);
+  margin: 20px;
+}
+
+.menu .card {
+  display: flex;
+  cursor: pointer;
+}
+
+.menu .card img {
+  width: 40%;
+}
+
+.menu .card .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 60%;
+}
+
+.menu .card .text span {
+  margin-left: 10px;
+}
+
+.menu .card .text .title {
+  font-weight: 900;
+  font-size: 16px;
+}
