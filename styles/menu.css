@@ -22,8 +22,14 @@
   cursor: pointer;
 }
 
+.menu .card:not(:last-child) {
+  border-bottom: 1px solid rgb(20, 28, 56);
+}
+
 .menu .card img {
   width: 40%;
+  margin: 10px;
+  border-radius: 15px;
 }
 
 .menu .card .text {

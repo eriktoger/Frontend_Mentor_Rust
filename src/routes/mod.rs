@@ -6,4 +6,6 @@ pub enum Route {
     Home,
     #[at("/statspreviewcard")]
     StatsPreviewCard,
+    #[at("/faqaccordioncard")]
+    FaqAccorcionCard,
 }

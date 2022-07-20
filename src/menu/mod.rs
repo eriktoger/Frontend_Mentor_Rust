@@ -52,6 +52,10 @@ impl Component for Menu {
                       difficulty="Newbie"
                       image_url="images/previews/stats_preview_card.jpg"
                       route={Route::StatsPreviewCard} />
+                <Card title={"FAQ Accordion Card"}
+                difficulty="Newbie"
+                image_url="images/previews/faq_accordion_card.jpg"
+                route={Route::FaqAccorcionCard} />
                 </div>
             </main>
         }
