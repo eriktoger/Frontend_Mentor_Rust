@@ -1,5 +1,6 @@
 use yew::{function_component, html, Callback, Properties};
 
+#[derive(Debug, Clone)]
 pub struct FAQ {
     id: i32,
     question: String,
@@ -42,32 +43,32 @@ pub fn faqCard(props: &FAQProps) -> Html {
     }
 }
 
-pub fn get_items() -> [FAQ; 5] {
-    [
+pub fn get_items() -> Vec<FAQ> {
+    vec![
         FAQ{
             id:0,
             question: String::from("How many team members can I invite?"),
-            answer:String::from("You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan."),
+            answer: String::from("You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan."),
         },
         FAQ{
             id:1,
             question: String::from("What is the maximum file upload size?"),
-            answer:String::from("No more than 2GB. All files in your account must fit your allotted storage space."),
+            answer: String::from("No more than 2GB. All files in your account must fit your allotted storage space."),
         },
         FAQ{
             id:2,
             question:String::from("How do I reset my password?"),
-            answer:String::from(" Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.")
+            answer: String::from(" Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.")
         },
         FAQ{
             id:3,
             question:String::from("Can I cancel my subscription?"),
-            answer:String::from("Yes! Send us a message and we’ll process your request no questions asked.")
+            answer: String::from("Yes! Send us a message and we’ll process your request no questions asked.")
         },
         FAQ{
             id:4,
             question:String::from("Do you provide additional support?"),
-            answer:String::from("Chat and email support is available 24/7. Phone lines are open during normal business hours.")
+            answer: String::from("Chat and email support is available 24/7. Phone lines are open during normal business hours.")
         }
     ]
 }
