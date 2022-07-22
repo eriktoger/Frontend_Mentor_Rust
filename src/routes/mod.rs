@@ -8,4 +8,6 @@ pub enum Route {
     StatsPreviewCard,
     #[at("/faqaccordioncard")]
     FaqAccorcionCard,
+    #[at("/articlepreviewcomponent")]
+    ArticlePreciewComponent,
 }

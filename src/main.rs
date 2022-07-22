@@ -1,8 +1,10 @@
+mod article_preview_component;
 mod faq_accordion_card;
 mod menu;
 mod routes;
 mod stats_preview_card;
 
+use article_preview_component::ArticlePreciewComponent;
 use faq_accordion_card::FaqAccorcionCard;
 use menu::Menu;
 use routes::Route;
@@ -16,6 +18,7 @@ fn switch(routes: &Route) -> Html {
         Route::Home => html! {<Menu/>},
         Route::StatsPreviewCard => html! { <StatsPreviewCard/>},
         Route::FaqAccorcionCard => html! {<FaqAccorcionCard/>},
+        Route::ArticlePreciewComponent => html! {<ArticlePreciewComponent/>},
     }
 }
 

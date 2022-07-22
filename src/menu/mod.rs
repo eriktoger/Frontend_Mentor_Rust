@@ -35,6 +35,34 @@ impl Component for Card {
     }
 }
 
+struct CardInfo<'a> {
+    title: &'a str,
+    image_url: &'a str,
+    difficulty: &'a str,
+    route: Route,
+}
+
+const CARD_INFO: [CardInfo; 3] = [
+    CardInfo {
+        title: "Stats Preview Card",
+        image_url: "images/previews/stats_preview_card.jpg",
+        difficulty: "Newbie",
+        route: Route::StatsPreviewCard,
+    },
+    CardInfo {
+        title: "FAQ Accordion Card",
+        image_url: "images/previews/faq_accordion_card.jpg",
+        difficulty: "Newbie",
+        route: Route::FaqAccorcionCard,
+    },
+    CardInfo {
+        title: "Article Preview Component",
+        image_url: "images/previews/article_preview_component.jpg",
+        difficulty: "Newbie",
+        route: Route::ArticlePreciewComponent,
+    },
+];
+
 pub struct Menu;
 
 impl Component for Menu {
@@ -48,14 +76,12 @@ impl Component for Menu {
         html! {
             <main class="menu">
                 <div class="container">
-                <Card title={"Stats Preview Card"}
-                      difficulty="Newbie"
-                      image_url="images/previews/stats_preview_card.jpg"
-                      route={Route::StatsPreviewCard} />
-                <Card title={"FAQ Accordion Card"}
-                difficulty="Newbie"
-                image_url="images/previews/faq_accordion_card.jpg"
-                route={Route::FaqAccorcionCard} />
+                {for CARD_INFO.map(|item|{
+                    html!{<Card title={item.title}
+                      difficulty={item.difficulty}
+                      image_url={item.image_url}
+                      route={item.route.clone()} />}
+                })}
                 </div>
             </main>
         }
