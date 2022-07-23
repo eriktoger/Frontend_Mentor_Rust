@@ -2,6 +2,7 @@
   font-family: Manrope;
   width: 100vw;
   height: 100vh;
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,8 +87,7 @@ h4 {
   position: absolute;
   align-items: center;
   display: flex;
-  right: calc((100vw - 725px) / 2 - 42px);
-  bottom: calc((100vh - 280px) / 2 + 100px);
+  transform: translate(-100px, -60px);
   background-color: #49556d;
   color: hsl(212, 23%, 69%);
   font-size: 12px;
@@ -159,8 +159,7 @@ h4 {
   }
 
   .shareModal {
-    right: calc((100vw - 300px) / 2);
-    bottom: calc((100vh - 500px) / 2);
+    transform: translate(-235px, 5px);
     width: 240px;
   }
 
